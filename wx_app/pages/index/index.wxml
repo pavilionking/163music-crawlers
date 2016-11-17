@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="index-list">
+    <block wx:for="{{musicList}}">
+      <view class="{{index==currentTab ? 'list-item active' : 'list-item'}}"
+        bindtap="musicListItemTab" data-index="{{index}}">
+        {{item.name}}
+      </view>
+    </block>
+  </view>
+</view>

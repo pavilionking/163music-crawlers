@@ -1,0 +1,23 @@
+{
+  "name": "163music-crawlers",
+  "version": "1.0.0",
+  "description": "163music crawlers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavilionking/163music-crawlers.git"
+  },
+  "keywords": [
+    "163music",
+    "crawler"
+  ],
+  "author": "pavilion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavilionking/163music-crawlers/issues"
+  },
+  "homepage": "https://github.com/pavilionking/163music-crawlers#readme"
+}
