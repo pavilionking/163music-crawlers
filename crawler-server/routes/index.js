@@ -1,5 +1,6 @@
 var express = require('express');
 var Netease = require('../netease/netease')
+var {list} = require('../netease/url')
 var router = express.Router();
 
 /* GET home page. */

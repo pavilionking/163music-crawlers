@@ -26,6 +26,7 @@ App({
   },
   globalData:{
     userInfo:null,
+    expire: 3600 * 24,
     musicList: [
       {
         name: "最新榜",

@@ -1,7 +1,21 @@
 /**index.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #222;
+}
 .index-list{
   display: flex;
   flex-direction: row;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #FFF;
 }
 
 .list-item{
@@ -14,4 +28,86 @@
 .list-item.active{
   color: #cd3d3d;
   border-bottom: 2px solid #cd3d3d;
+}
+.list-box{
+  margin-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgba(245, 245, 245, 0.89);
+}
+.list-view{
+  display: none;
+  height: 500px;
+}
+.list-view.active{
+  display: block;
+}
+.m-item{
+  height: 40px;
+  overflow: hidden;
+}
+.m-item:active{
+  background-color: rgb(230, 230, 230);
+}
+.cover-img{
+  width: 100%;
+}
+.m-item .hd{
+  float: left;
+  width: 60rpx;
+  line-height: 40px;
+  text-align: center;
+}
+.m-item .bd{
+  float: left;
+  width: 680rpx;
+  padding-left: 10rpx;
+  border-bottom: 1px solid #ddd;
+}
+.m-item .bd .name{
+  height: 24px;
+  line-height: 24px;
+  font-size: 13px;
+}
+.m-item .bd .artist{
+  height: 15px;
+  font-size: 10px;
+  color: #999;
+}
+
+/*controller*/
+.pc-play-control{
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.pc-song-img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.pc-play-control .hd{
+  float: left;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.pc-play-control .bd{
+  float: left;
+  padding-left: 10rpx;
+  border-bottom: 1px solid #ddd;
+}
+.pc-play-control .bd .name{
+  height: 24px;
+  line-height: 28px;
+  font-size: 13px;
+}
+.pc-play-control .bd .artist{
+  height: 15px;
+  font-size: 10px;
+  color: #999;
 }

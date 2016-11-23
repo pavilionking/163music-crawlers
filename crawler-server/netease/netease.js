@@ -55,6 +55,20 @@ class Netease {
     return deferred.promise;
   }
 
+  getSongs(data) {
+    if (data.code == 200) {
+      var result = {code: 200, playload: {}};
+      var playload = result.playload;
+      playload.coverImgUrl = data.result.coverImgUrl;
+      playload.description = data.result.description;
+      playload.name = data.result.name;
+
+
+    } else {
+      return {code: 400, msg: "sth. wrong!"}
+    }
+  }
+
 }
 
 
@@ -65,15 +79,13 @@ function getSong(cb) {
   //   .done((data)=>{
   //     console.log(data);
   //   });
-  // netease.playlist(484144097).then((value) => {
-  //   console.log(value);
-  // })
-  netease.fetchDiscoverPlaylist()
-    .then((value)=>{
-      console.log(value);
-    })
+  netease.playlist(19723756).then((value) => {
+    var result = netease.getSongs(value);
+    console.log(result);
+  })
 }
-// getSong()
+
+getSong()
 
 // let netease = new Netease();
 // let pro = netease.search(decodeURIComponent("女儿情"))

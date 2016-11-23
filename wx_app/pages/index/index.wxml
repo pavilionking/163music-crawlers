@@ -1,11 +1,39 @@
 <!--index.wxml-->
 <view class="container">
   <view class="index-list">
-    <block wx:for="{{musicList}}">
+    <block wx:for="{{musicList}}" wx:key="index">
       <view class="{{index==currentTab ? 'list-item active' : 'list-item'}}"
         bindtap="musicListItemTab" data-index="{{index}}">
         {{item.name}}
       </view>
     </block>
   </view>
+
+  <!-- 列表 -->
+  <scrill-view scroll-y="true" class="list-box">
+    <image src="{{displayList.coverImgUrl}}" mode="scaleToFill" class="cover-img"></image>
+    <block wx:for="{{displayList.tracks}}" wx:key="index">
+      <view class="m-item" catchtap="displayListItemTap" data-index="{{index}}">
+        <view class="hd">{{(index + 1) + "."}}</view>
+        <view class="bd">
+          <view class="name">{{item.name}}</view>
+          <view class="artist">{{item.artists[0].name + " - " + item.album.name}}</view>
+        </view>
+      </view>
+    </block>
+  </scrill-view>
+
+  <!-- 播放控制 -->
+  <view class="pc-play-control">
+    <view class="hd">
+      <image src="{{song.album.picUrl || song.album.blurPicUrl}}"
+             mode="scaleToFill" class="pc-song-img"/>
+    </view>
+    <view class="bd">
+      <view class="name">{{song.name}}</view>
+      <view class="artist">{{song.artists[0].name + " - " + song.album.name}}</view>
+    </view>
+
+  </view>
+
 </view>
